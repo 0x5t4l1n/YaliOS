@@ -62,12 +62,12 @@ function Invoke-YaliBoot([int] $port, [string[]] $commands) {
 }
 
 Write-Host 'First boot: explicitly formatting the newly created image and writing a file...'
-$rootPassword = 'R' + [Guid]::NewGuid().ToString('N')
-$userPassword = 'U' + [Guid]::NewGuid().ToString('N')
-Write-Host "New root username: root"
-Write-Host "New root password: $rootPassword"
-Write-Host "New user username: user"
-Write-Host "New user password: $userPassword"
+$rootPassword = 'Root@123'
+$userPassword = 'useruser'
+Write-Host 'Test root username: root'
+Write-Host 'Test root password: Root@123'
+Write-Host 'Test user username: user'
+Write-Host 'Test user password: useruser'
 $first = Invoke-YaliBoot 5592 @('format /dev/yali-test','setup-users',$rootPassword,$userPassword,'whoami','mkdir /install-test','write /install-test/installed.txt persistent-install')
 Write-Host $first
 
