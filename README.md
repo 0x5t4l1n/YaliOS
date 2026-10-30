@@ -3,6 +3,13 @@
 The first bootable YaliOS kernel: a minimal `no_std` Rust x86_64 kernel that
 boots through the `bootloader` crate and runs in QEMU BIOS mode.
 
+## Community
+
+Join the YaliOS community chat:
+
+- **Web:** [chat.w4nn4d13.tech](https://chat.w4nn4d13.tech) — join `#yalios` channel
+- **IRC client:** `chat.w4nn4d13.tech` port `6697` (TLS) — channel `#yalios`
+
 ## Prerequisites
 
 - Rustup with the nightly toolchain
